@@ -6,17 +6,17 @@ const app = express();
 // middleware
 app.use(cors());
 app.use(express.json());
-const dashboardRoutes = require("./routes/dashboardRoutes");
+const dashboardRoutes = require("../routes/dashboardRoutes");
 
 app.use("/api/dashboard", dashboardRoutes);
 
-const transactionRoutes = require("./routes/transactionRoutes");
+const transactionRoutes = require("../routes/transactionRoutes");
 
 app.use("/api/transactions", transactionRoutes);
 
 // import routes & middleware
-const authRoutes = require("./routes/authRoutes");
-const authMiddleware = require("./middleware/authMiddleware");
+const authRoutes = require("../routes/authRoutes");
+const authMiddleware = require("../middleware/authMiddleware");
 
 // public routes
 app.use("/api/auth", authRoutes);
