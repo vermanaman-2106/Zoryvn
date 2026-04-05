@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #e2e8f0;
+  font-family: system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+/* ===== ROOT ===== */
+#root {
+  width: 100%;
+}
+
+/* ===== SCROLLBAR (PREMIUM TOUCH) ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+/* ===== REUSABLE COMPONENTS ===== */
+
+/* Card style */
+.card {
+  @apply bg-gray-900 rounded-xl shadow-lg p-6 transition duration-300;
+}
+
+.card:hover {
+  @apply scale-[1.02] shadow-2xl;
+}
+
+/* Button style */
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition;
+}
+
+.btn-primary {
+  @apply bg-blue-500 hover:bg-blue-600 text-white;
+}
+
+.btn-danger {
+  @apply bg-red-500 hover:bg-red-600 text-white;
+}
+
+/* Input fields */
+.input {
+  @apply w-full p-2 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-blue-500;
+}
+
+/* Section spacing */
+.section {
+  @apply p-8 max-w-6xl mx-auto;
+}
+
+/* Heading */
+.heading {
+  @apply text-3xl font-bold mb-6;
+}
